@@ -28,7 +28,7 @@ add_newline = false
 
 [directory]
 style = "$style"
-format = ':[$path]($style)[$read_only]($read_only_style) '
+format = '[  $path]($style)[$read_only]($read_only_style) '
 read_only = ' 󰌾'
 
 [directory.substitutions]
@@ -90,7 +90,7 @@ format = '[](#00007f)[ Lua](fg:white bg:#00007f)[](#00007f)'
 format = '[](white)[ Rust](fg:bright-black bg:white)[](white)'
 
 [username]
-format = '[ $user](fg:white bg:bright-black)'
+format = '[ $user](fg:black bg:bright-black)'
 disabled = false
 show_always = true
 

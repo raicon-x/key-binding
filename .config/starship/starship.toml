@@ -5,12 +5,12 @@ format = """
 $cmd_duration\
 $time\
 $line_break\
-[░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](fg:#a4aed2 bg:bright-black)\
+[░▒▓](bright-black)\
+[  ](bg:bright-black fg:#ffcccc)\
+[](fg:bright-black bg:#282b3e)\
 $username\
 $hostname\
-[](fg:bright-black)\
+[](fg:#282b3e)\
 $directory\
 $git_branch\
 $git_state\
@@ -39,9 +39,9 @@ read_only = ' 󰌾'
 "Developer" = "󰲋 "
 
 [character]
-success_symbol = "[❯](blink #ffcccc)"
-error_symbol = "[❯](blink red)"
-vimcmd_symbol = "[❮](blink green)"
+success_symbol = "[](#ffcccc)"
+error_symbol = "[](red)"
+vimcmd_symbol = "[](green)"
 
 [git_branch]
 symbol = ""
@@ -90,7 +90,7 @@ format = '[](#00007f)[ Lua](fg:white bg:#00007f)[](#00007f)'
 format = '[](white)[ Rust](fg:bright-black bg:white)[](white)'
 
 [username]
-format = '[ $user](fg:black bg:bright-black)'
+format = '[ $user](fg:black bg:#282b3e)'
 disabled = false
 show_always = true
 

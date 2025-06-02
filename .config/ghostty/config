@@ -1,0 +1,19 @@
+# Color theme
+theme = tokyonight
+
+# Font
+font-family = JetBrains Mono
+
+# Cursor
+cursor-style = block
+cursor-color = #ffcccc
+
+# Background
+background-opacity = 0.8
+background-blur = true
+
+# Keybindings
+keybind = super+u=scroll_page_lines:-20
+keybind = super+i=scroll_page_lines:20
+keybind = super+f=toggle_fullscreen
+

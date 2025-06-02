@@ -1,39 +1,52 @@
+# ---------- WezTerm ---------- 
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 
+# --------- Nerd Font -----------
 # brew install font-jetbrains-mono-nerd-font
 
+# --------- Starship -----------
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
+# --------- zah-autosuggestion ----------- 
 # brew install zsh-autosuggestion
 # source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# --------- zsh-syntax-highting ----------- 
 # brew install zsh-syntax-hightlighting
-#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# --------- zsh-auto-complete ----------- 
 # brew intall zsh-autocomplete
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+# --------- eza ----------- 
 # brew install eza (better ls)
+# download theme from https://github.com/eza-community/eza-themes/blob/main/themes/tokyonight.yml
+# rename theme.yml
 alias ls="eza --icons"
+export EZA_CONFIG_DIR=~/.config/eza
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-# Preview file content using bat (https://github.com/sharkdp/bat)
-export FZF_CTRL_T_OPTS="
-  --walker-skip .git,node_modules,target
-  --preview 'bat -n --color=always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-# CTRL-Y to copy the command into clipboard using pbcopy
-export FZF_CTRL_R_OPTS="
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
-  --color header:italic
-  --header 'Press CTRL-Y to copy command into clipboard'"
-# Print tree structure in the preview window
-export FZF_ALT_C_OPTS="
-  --walker-skip .git,node_modules,target
-  --preview 'tree -C {}'"
+# --------- fzf ----------- 
+# brew install fzf
+source ~/.config/fzf/config.sh
 
+# --------- bat ----------- 
 # brew install bat (better cat)
+
+# --------- fd ----------- 
+# brew install fd (better find)
+
+# --------- delta-git -----------
+# brew install git-delta
+# https://github.com/dandavison/delta
+# config in ~/.gitconfig
+# git config --global core.pager delta
+# git config --global interactive.diffFilter 'delta --color-only'
+# git config --global delta.navigate true
+# git config --global delta.dark true
+# git config --global delta.side-by-side true
+# git config --global delta.line-numbers true
+# git config --global merge.conflictStyle zdiff3

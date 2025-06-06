@@ -42,11 +42,13 @@ source ~/.config/fzf/config.sh
 # --------- delta-git -----------
 # brew install git-delta
 # https://github.com/dandavison/delta
-# config in ~/.gitconfig
-# git config --global core.pager delta
-# git config --global interactive.diffFilter 'delta --color-only'
-# git config --global delta.navigate true
-# git config --global delta.dark true
-# git config --global delta.side-by-side true
-# git config --global delta.line-numbers true
-# git config --global merge.conflictStyle zdiff3
+# git config --global include.path ~/.config/git-delta/.gitconfig.delta
+
+# --------- tldr -----------
+# tlrc is rust client for tldr
+# brew install tlrc
+
+# --------- tmux ----------- 
+# brew install tmux
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
+

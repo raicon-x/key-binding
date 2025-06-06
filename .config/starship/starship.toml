@@ -5,7 +5,6 @@ format = """
 $cmd_duration\
 $time\
 $line_break\
-[░▒▓](bright-black)\
 [  ](bg:bright-black fg:#ffcccc)\
 [](fg:bright-black bg:#282b3e)\
 $username\
@@ -39,9 +38,9 @@ read_only = ' 󰌾'
 "Developer" = "󰲋 "
 
 [character]
-success_symbol = "[](#ffcccc)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
+success_symbol = "[>](#ffcccc)"
+error_symbol = "[>](red)"
+vimcmd_symbol = "[<](green)"
 
 [git_branch]
 symbol = ""
@@ -78,7 +77,7 @@ format = '[](white)[ C](fg:blue bg:white)[](white)'
 format = '[](white)[ CPP](fg:blue bg:white)[](white)'
 
 [python]
-format = '[](#517ead)[ Python](fg:#fae47a bg:#517ead)[](#517ead)'
+format = '[](#517ead)[ Python(#$virtualenv)](fg:#fae47a bg:#517ead)[](#517ead)'
 
 [swift]
 format = '[](#de5d43)[ Swift](fg:white bg:#de5d43)[](#de5d43)'
@@ -90,7 +89,7 @@ format = '[](#00007f)[ Lua](fg:white bg:#00007f)[](#00007f)'
 format = '[](white)[ Rust](fg:bright-black bg:white)[](white)'
 
 [username]
-format = '[ $user](fg:black bg:#282b3e)'
+format = '[ $user](fg:bright-black bg:#282b3e)'
 disabled = false
 show_always = true
 

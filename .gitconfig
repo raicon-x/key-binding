@@ -1,2 +1,6 @@
 [include]
 	path = /Users/raicon/.config/git-delta/.gitconfig.delta
+
+[user]
+  name = Raicon X
+  email = raicon.xx@gmail.com

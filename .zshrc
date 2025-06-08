@@ -44,6 +44,9 @@ source ~/.config/fzf/config.sh
 # https://github.com/dandavison/delta
 # git config --global include.path ~/.config/git-delta/.gitconfig.delta
 
+# --------- ripgrep -----------
+# brew install ripgrep
+
 # --------- tldr -----------
 # tlrc is rust client for tldr
 # brew install tlrc
@@ -52,3 +55,15 @@ source ~/.config/fzf/config.sh
 # brew install tmux
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 
+
+# --------- install lua5.1 ----------- 
+# This is required by neovim for lazy/luarocks
+# wget https://www.lua.org/ftp/lua-5.1.5.tar.gz
+# tar xzf lua-5.1.5.tar.gz
+# cd lua-5.1.5
+# make macosx
+# mkdir ~/opt
+# make INSTALL_TOP=$HOME/opt/lua@5.1 install
+# mkdir -p ~/.local/bin
+# ln -s ~/opt/lua@5.1/bin/lua ~/.local/bin/lua5.1
+export PATH=~/.local/bin/:$PATH
